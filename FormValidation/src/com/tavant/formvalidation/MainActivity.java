@@ -3,11 +3,17 @@ package com.tavant.formvalidation;
 
 
 
+
+
+
 import android.support.v7.app.ActionBarActivity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.Spinner;
 
 public class MainActivity extends ActionBarActivity {
@@ -46,6 +52,19 @@ public class MainActivity extends ActionBarActivity {
 		return super.onOptionsItemSelected(item);
 	}
 	
-	
+	public void sendData(View view){
+		Intent intent = new Intent(this, DisplayDataActivity.class);
+		Bundle extras = new Bundle();
+		EditText name = (EditText) findViewById(R.id.edit_name);
+		EditText experience = (EditText) findViewById(R.id.experience);
+		EditText email = (EditText) findViewById(R.id.email);
+		EditText phone = (EditText) findViewById(R.id.phone);
+		extras.putString("name",name.getText().toString());
+		extras.putString("experience",experience.getText().toString());
+		extras.putString("email",email.getText().toString());
+		extras.putString("phone",phone.getText().toString());
+		intent.putExtras(extras);
+		startActivity(intent);
+	}
 	
 }

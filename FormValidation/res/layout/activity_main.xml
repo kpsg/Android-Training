@@ -51,7 +51,7 @@
         android:layout_toRightOf="@+id/name_text"
         android:layout_toEndOf="@+id/name_text"
         android:ems="10"
-        android:hint="@string/edit_name" >
+        android:hint="@string/edit_name">
     </EditText>
     <TextView android:id="@+id/age"
         android:layout_below="@id/name_text"
@@ -100,6 +100,8 @@
         android:textSize="25sp"
         android:layout_marginTop="@dimen/margin_top"/>
      
+     
+     
      <TextView android:id="@+id/email"
         android:layout_below="@id/experience"
         android:layout_height="wrap_content"
@@ -117,5 +119,61 @@
         android:textStyle="bold"
         android:textSize="25sp"
         android:layout_marginTop="@dimen/margin_top"/>
+     
+     
+     
+     <EditText
+        android:id="@+id/edit_experience"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/experience"
+        android:layout_marginLeft="@dimen/text_margin_left"
+        android:layout_marginStart="@dimen/text_margin_left"
+        android:layout_toRightOf="@+id/experience"
+        android:layout_toEndOf="@+id/experience"
+        android:ems="10"
+        android:hint="@string/edit_experience" />
+       
+         <EditText
+        android:id="@+id/edit_phone"
+        android:inputType="phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true" 
+        android:layout_alignParentRight="true" 
+        android:layout_alignTop="@+id/phone" 
+       
+        android:layout_marginLeft="@dimen/text_margin_left"
+        android:layout_marginStart="@dimen/text_margin_left"
+        android:layout_toRightOf="@+id/phone"
+        android:layout_toEndOf="@+id/phone"
+        android:ems="10"
+        android:hint="@string/edit_phone" />
+      
+             <EditText
+        android:id="@+id/edit_email"
+        android:layout_width="wrap_content"
+        android:inputType="textEmailAddress"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/email"
+        android:layout_marginLeft="@dimen/text_margin_left"
+        android:layout_marginStart="@dimen/text_margin_left"
+        android:layout_toRightOf="@+id/email"
+        android:layout_toEndOf="@+id/email"
+        android:ems="10"
+        android:hint="@string/edit_email" />
+        
+        <Button android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/button_confirm"
+        android:onClick="sendData"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/phone"
+        android:layout_marginTop="10dp"/>
+        
 
 </RelativeLayout>
