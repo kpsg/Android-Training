@@ -3,8 +3,13 @@ package com.tavant.formvalidation;
 import android.support.v7.app.ActionBarActivity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 public class DisplayDataActivity extends ActionBarActivity {
@@ -12,15 +17,58 @@ public class DisplayDataActivity extends ActionBarActivity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		//setContentView(R.layout.activity_display_data);
+		setContentView(R.layout.activity_display_data);
 		Intent intent = getIntent();
 		Bundle extras = intent.getExtras();
-		TextView name = new TextView(this);
-		name.setTextSize(20);
-		name.setText(extras.getString("name"));
-		setContentView(name);
+		TextView name = (TextView) findViewById(R.id.name_data);
+				name.setText(extras.getString("name"));
+		
+		TextView experience = (TextView) findViewById(R.id.experience_data);
+		experience.setText(extras.getString("experience"));
+				
+		TextView email = (TextView) findViewById(R.id.email_data);
+		email.setText(extras.getString("email"));	
+		
+		TextView phone = (TextView) findViewById(R.id.phone_data);
+		phone.setText(extras.getString("phone"));
+		
+		Button edit_button = (Button)findViewById(R.id.edit_button);
+		
+		edit_button.setOnClickListener(editClickListener);
+		
+		Button submit_button = (Button)findViewById(R.id.submit_button);
+		
+		submit_button.setOnClickListener(submitClickListener);
+		
+		
+		//setContentView(name);
 		
 	}
+	
+	
+	
+	private OnClickListener editClickListener = new OnClickListener() {
+
+	    @Override
+	    public void onClick(View v){
+	    	finish();
+
+			
+	        }
+	    };
+	    
+	    private OnClickListener submitClickListener = new OnClickListener() {
+
+		    @Override
+		    public void onClick(View v){
+		    	
+
+				Intent intent2 = new Intent(DisplayDataActivity.this,SubmitActivity.class);
+				startActivity(intent2);
+		        }
+		    };
+		    
+		   
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {

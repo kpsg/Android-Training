@@ -15,6 +15,16 @@
         android:textStyle="bold"
         android:textSize="25sp"
         />
+     <TextView android:id="@+id/name_data"
+        android:layout_width="wrap_content"
+       
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/name_text"
+        android:layout_toEndOf="@+id/name_text"
+        android:textSize="15sp"
+        android:layout_alignBottom="@+id/name_text"
+        />
+     
      
      <TextView android:id="@+id/experience"
         android:layout_below="@id/name_text"
@@ -24,6 +34,15 @@
         android:textStyle="bold"
         android:textSize="25sp"
         android:layout_marginTop="@dimen/margin_top"/>
+    
+     <TextView android:id="@+id/experience_data"
+         android:layout_toRightOf="@+id/experience"
+        android:layout_toEndOf="@+id/experience"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:layout_alignBottom="@+id/experience"
+        />
      
      <TextView android:id="@+id/email"
         android:layout_below="@id/experience"
@@ -32,7 +51,18 @@
         android:text="@string/email"
         android:textStyle="bold"
         android:textSize="25sp"
-        android:layout_marginTop="@dimen/margin_top"/>
+        android:layout_marginTop="@dimen/margin_top"
+        />
+     
+     <TextView android:id="@+id/email_data"
+        android:layout_toRightOf="@+id/email"
+        android:layout_toEndOf="@+id/email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:layout_alignBottom="@+id/email"
+        android:layout_marginTop="20dp"
+        />
      
      <TextView android:id="@+id/phone"
         android:layout_below="@id/email"
@@ -41,7 +71,37 @@
         android:text="@string/phone"
         android:textStyle="bold"
         android:textSize="25sp"
-        android:layout_marginTop="@dimen/margin_top"/>
+        android:layout_marginTop="@dimen/margin_top"
+        />
+     
+     <TextView android:id="@+id/phone_data"
+        android:layout_toRightOf="@+id/phone"
+        android:layout_toEndOf="@+id/phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:layout_alignBottom="@+id/phone"
+        android:layout_marginTop="20dp"
+        />
 
+     <Button android:id="@+id/submit_button" 
+            android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:text="@string/submit_button"
+       android:layout_below="@+id/phone_data"
+        android:layout_toRightOf="@+id/edit_button"
+        android:layout_toEndOf="@+id/edit_button"
+        android:layout_marginTop="80dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp"/>
+     
+     <Button android:id="@+id/edit_button" 
+            android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:text="@string/edit_button"
+          android:layout_below="@+id/phone"        
+        android:layout_marginTop="80dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginStart="60dp"/>
 
 </RelativeLayout>

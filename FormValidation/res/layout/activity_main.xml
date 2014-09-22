@@ -167,10 +167,11 @@
         android:ems="10"
         android:hint="@string/edit_email" />
         
-        <Button android:layout_width="wrap_content"
+        <Button android:id="@+id/button1" 
+            android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/button_confirm"
-        android:onClick="sendData"
+       
         android:layout_centerHorizontal="true"
         android:layout_below="@+id/phone"
         android:layout_marginTop="10dp"/>

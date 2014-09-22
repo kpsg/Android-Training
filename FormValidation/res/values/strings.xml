@@ -14,7 +14,12 @@
     <string name="edit_phone">Enter Phone</string>
     <string name="edit_email">Enter Email</string>
     <string name="button_confirm">Confirm</string>
-
+    <string name="submit_button">Submit</string>
+    <string name="edit_button">Edit</string>
+    <string name="thankyou_message">Thank you for submitting your details. To submit a new form click new registration.
+        
+    </string>
+	<string name="new_registration_button">New Registration</string>
     <string-array name="age_array">
         <item>18</item>
         <item>19</item>
@@ -33,5 +38,6 @@
 
     <string name="title_activity_display_data">DisplayDataActivity</string>
     <string name="hello_world">Hello world!</string>
+    <string name="title_activity_submit">Thank you</string>
 
 </resources>

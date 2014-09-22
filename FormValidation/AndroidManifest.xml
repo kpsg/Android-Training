@@ -26,6 +26,10 @@
             android:name=".DisplayDataActivity"
             android:label="@string/title_activity_display_data" >
         </activity>
+        <activity
+            android:name=".SubmitActivity"
+            android:label="@string/title_activity_submit" >
+        </activity>
     </application>
 
 </manifest>
